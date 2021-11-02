@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, {useState} from 'react'
+import Footer from './components/Footer';
+import Formulario from './components/Formulario';
+import Header from './components/Header';
+import styled from 'styled-components';
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita <code>src/App.js</code> y guarda para ver cambios.
-        </p>
-        <a
-          className="App-link"
-          href="https://codealo.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprende con Codealo
-        </a>
-      </header>
+   
+
+	return (
+    <div>
+      <Header/>
+      <Formulario/>
+      <br/>
+      
+      <br/>
+	  
+      <Footer/>
     </div>
-  );
+      
+);
 }
 
 export default App;
+
+const Contenido = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1 {
+		font-size: 42px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	img {
+		width: 100%;
+		vertical-align: top;
+		border-radius: 3px;
+	}
+`;
